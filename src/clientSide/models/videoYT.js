@@ -14,14 +14,16 @@ class VideoYT{
 
     createPlayer(){
         // Crreate the yt video player
-        this.player = new YT.Player('youtube-video-player', {
-            height: '360',
-            width: '640',
-            videoId: this.videoID,
-            events: {
-              'onReady': this.onPlayerReady
-            }
-        });    
+        window.YT.ready(() => {
+            this.player = new YT.Player('youtube-video-player', {
+                height: '360',
+                width: '640',
+                videoId: this.videoID,
+                events: {
+                'onReady': this.onPlayerReady
+                }
+            });    
+        })
     }
     getYTVideoID(url){
         let splittedStr = this.url.split("/")
@@ -61,7 +63,7 @@ class VideoYT{
         return new Promise(resolve => {
             const interval = setInterval(() => {
                 console.log('Interval...')
-                if(this.player.getCurrentTime() >= this.player.getDuration()) {
+                if(this.player.getCurrentTime() >= (this.player.getDuration() - 2)) {
                     resolve('foo') // Once video finished, the promise pass to Resolve Stated
                     clearInterval(interval) // Stop interval
                 } 

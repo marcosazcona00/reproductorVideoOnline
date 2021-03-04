@@ -2,7 +2,6 @@ let socket
 let evento
 let videoToPlay = null 
 
-// https://media.w3.org/2010/05/sintel/trailer.mp4
 
 function connectServer() {
     const host = 'XXX.XXX.XXX.XXX:3000' 

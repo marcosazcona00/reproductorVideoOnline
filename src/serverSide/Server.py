@@ -156,6 +156,6 @@ class Server(object):
 if __name__ == '__main__':
     server = Server()
     start_server = websockets.serve(server.accept_client, "XXX.XXX.XXX.XXX", 3000)
-    print('Listening on... 192.168.1.40:3000')
+    print('Listening on... 192.168.1.42:3000')
     asyncio.get_event_loop().run_until_complete(start_server)
     asyncio.get_event_loop().run_forever()
