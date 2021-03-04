@@ -33,6 +33,7 @@
         <div class="row">
             <div class="col-md-9"> 
                 <div id="video-player" style="margin: 0 auto; display: none">
+                    <div id="youtube-video-player"></div>
                     <video id="video" class="video" autoplay="true" muted="muted" controls> 
                     </video>
                     <button id="button-player" class="btn btn-info"> Pause </button>
@@ -53,6 +54,9 @@
     </div>
     </div>
 
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="../models/VideoFactory.js"></script>
+    <script src="../models/videoYT.js"></script>
     <script src="../clientSocket/clientSocket.js"></script>
     <script src="./index.js"></script>
     <script src="../models/video.js"></script>

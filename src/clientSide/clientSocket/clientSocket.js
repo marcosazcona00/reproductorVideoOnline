@@ -39,7 +39,7 @@ function sendMessageChat(msg){
 async function playVideo(url) {
     hideForm()
     showVideoPlayer()    
-    videoToPlay = new Video(video,url)
+    videoToPlay = (new VideoFactory(video,url)).createVideo()
     videoToPlay.play()        
     await videoToPlay.awaitFinished()
     socket.send('finished-video')   

@@ -84,3 +84,21 @@ function hasMsgTag(event){
     // Return boolean if is a message chat
     return event.split(" ")[0] == "<msg>"
 }
+
+function hideNormalVideo(){
+    video.style.display = "none"
+}
+
+function showNormalVideo(){
+    video.style.display = "block"
+}
+
+function createVideoYTPlayer(){
+    let divYTPlayer = document.createElement("div")
+    divYTPlayer.id = "youtube-video-player"
+    document.getElementById("video-player").appendChild(divYTPlayer)
+}
+
+function deleteVideoYTPlayer(){
+    document.getElementById("youtube-video-player").remove()
+}
