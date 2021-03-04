@@ -1,0 +1,32 @@
+.nav {
+    list-style: "none";
+    display: "flex";
+}
+
+.nav > li:not(:first-child) {
+    margin-left: 300px;
+}
+
+.div-play-button{
+    width: 50%; 
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.button-play{
+    width: 83%;
+}
+
+.chat-list{
+    background: white;
+    list-style: none;   
+}
+
+.video {
+    width: 100%
+}
+
+.player-container{
+    margin: 0; 
+    padding: 0;
+}

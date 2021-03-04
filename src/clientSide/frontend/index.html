@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Reproductor</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <!--
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="nav">
+            <li> ReprOnline </li>
+            <li>
+                <form method="GET" id="form">
+                    <input id="url-video" type="text"  placeholder="URL Video" size="50"/>
+                    <input type="submit" class="btn btn-success" value="Add" />
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <div class="div-play-button">
+        <button id="button-play" class="button-play btn btn-success"> Play </button>
+    </div>
+    <div style="margin-top: 20px">
+    <div class="container" style="margin: 0; padding: 0;">
+        <div class="row">
+            <div class="col-md-9"> 
+                <div id="video-player" style="margin: 0 auto; display: none">
+                    <video id="video" class="video" autoplay="true" muted="muted" controls> 
+                    </video>
+                    <button id="button-player" class="btn btn-info"> Pause </button>
+                </div>
+            </div>
+            <div class="col-md-3" style="border: solid; border-width: thin; background: #d8e1d7;"> 
+                <label> Chat </label>
+                <div id="chat">
+                    <textarea id="chat-area" rows="15" cols="26" readonly></textarea>
+                    <ul id="chat-list" class="chat-list"></ul>
+                    <form method="GET" id="chat-form">
+                        <input type="text" placeholder="Type message" id="message-chat" size="25"/>
+                        <input type="submit" value="Send" class="btn btn-primary" style="width: 100%"/>
+                    </form>
+                </div>        
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="../clientSocket/clientSocket.js"></script>
+    <script src="./index.js"></script>
+    <script src="../models/video.js"></script>
+    <script src="../helpers/helpers.js"></script>
+</body>
+</html>
